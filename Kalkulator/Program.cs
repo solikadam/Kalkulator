@@ -39,21 +39,26 @@
                         break;
                 }
                 Console.WriteLine();
-                Console.WriteLine("Restart?\n 0=(NO) 1=(YES)");
-                i = int.Parse(Console.ReadLine());
-                Console.Clear();
+                Restart();
             }
             else
             {
                 Console.WriteLine("You chose sign that doesn't exist");
-                Console.WriteLine();
-                Console.WriteLine("Restart?\n 0=(NO) 1=(YES)");
-                i = int.Parse(Console.ReadLine());
-                Console.Clear();
+                Restart();
             }
 
 
 
         } while (i == 1);
+    }
+
+    public static int Restart()
+    {
+        int i = 0;
+        Console.WriteLine();
+        Console.WriteLine("Restart?\n 0=(NO) 1=(YES)");
+        i = int.Parse(Console.ReadLine());
+        Console.Clear();
+        return i;
     }
 }
